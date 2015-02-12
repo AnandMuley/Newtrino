@@ -1,0 +1,50 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+sourceCompatibility = 1.7
+version = '1.0'
+def SpringVersion = '4.0.0.RELEASE'
+def JUnitVersion = '4.11'
+def MongoVersion = '2.12.2'
+def SpringDataMongoVersion = '1.6.0.RELEASE'
+def JacksonVersion = '2.2.3'
+
+httpPort=8093
+
+ext{
+    spring = [
+            web: "org.springframework:spring-web:${SpringVersion}",
+            webmvc: "org.springframework:spring-webmvc:${SpringVersion}",
+            core: "org.springframework:spring-core:${SpringVersion}",
+            beans: "org.springframework:spring-beans:${SpringVersion}",
+            expression: "org.springframework:spring-expression:${SpringVersion}",
+            contextSupport: "org.springframework:spring-context-support:${SpringVersion}",
+            jdbc: "org.springframework:spring-jdbc:${SpringVersion}",
+            mongo : "org.springframework.data:spring-data-mongodb:${SpringDataMongoVersion}"
+    ]
+
+    junit = "junit:junit:${JUnitVersion}"
+
+    mongoDB = "org.mongodb:mongo-java-driver:${MongoVersion}"
+
+    fasterXml = "com.fasterxml.jackson.core:jackson-databind:${JacksonVersion}"
+
+    commons = [
+            fileupload : "commons-fileupload:commons-fileupload:1.2.1",
+            io : "commons-io:commons-io:2.4",
+            xmlapis : "xml-apis:xml-apis:1.4.01"
+    ]
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile spring.web,spring.webmvc,spring.core,spring.beans,spring.expression,spring.contextSupport
+    compile mongoDB,spring.mongo,fasterXml
+    compile commons.fileupload,commons.io,commons.xmlapis
+    testCompile junit
+}
