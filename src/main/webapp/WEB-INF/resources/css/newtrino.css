@@ -1,0 +1,129 @@
+.food-burger {
+    height: 50px;
+    width: 50px;
+}
+
+.food-protein{
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.font-large{
+    font-size: 40px;
+}
+
+.container-save-food{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.home-subtitle{
+    color: #09ae85 !important;
+}
+
+.lead{
+    color : #5E5E5E;
+}
+
+.caption h3{
+    color : #5E5E5E;
+}
+
+.heading1{
+    color : #09ae85;
+}
+
+.button{
+    background-color : #09ae85;
+    color : white;
+    width: 140px;
+}
+
+.add-nutrient-subtext{
+    color : #09ae85;
+    font-size : 13px;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.add-nutrient-subtext:hover{
+    font-weight: bold;
+}
+
+.navbar-header a{
+    color : black !important;
+    background: none;
+    text-shadow: none;
+    font-size: 20px;
+}
+
+.developer-text{
+    color : white !important;
+    font-size: 15px;
+}
+
+.jumbotron{
+    background-color : #eff3f1;
+    border : solid 1px #d9dddb;
+    border-radius : 5px;
+}
+
+.navbar-inverse{
+    background-image : none;
+    background-color : #09ae85;
+    border : solid 1px #09ae85;
+}
+
+.alert-success{
+    background-image: none;
+    background-color: #EFF3F1;
+    border: solid 1px #EFF3F1;
+    color : #09AE85;
+    font-size: 20px;
+}
+
+.products-panel-heading{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.products-panel-heading h4{
+    font-size: 25px;
+}
+
+.list-group-item-text{
+    text-align: left;
+    font-size: 15px !important;
+}
+
+.list-group-item-heading{
+    text-align: left;
+    font-size: 20px;
+}
+
+a.list-group-item.active.products-panel-heading{
+    background-image: none;
+    background-color: #09ae85;
+    border: solid 1px #09AE85;
+}
+
+a.list-group-item:focus, a.list-group-item:hover{
+    background-color: #d9dddb;
+    color : #09AE85;
+}
+
+.thumbnail h3{
+    color : #08795a;
+}
+
+.thumbnail{
+    background-color: #f5f9f7 !important;
+    color: #09AE85 !important;
+    border : solid 1px #09AE85;
+}
+
+.thumbnail:hover{
+    background-color: #09AE85 !important;
+    color: white !important;
+}

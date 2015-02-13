@@ -25,6 +25,10 @@ ext{
             mongo : "org.springframework.data:spring-data-mongodb:${SpringDataMongoVersion}"
     ]
 
+    javax = [
+            jstl : 'javax.servlet:jstl:1.2'
+    ]
+
     junit = "junit:junit:${JUnitVersion}"
 
     mongoDB = "org.mongodb:mongo-java-driver:${MongoVersion}"
@@ -44,7 +48,7 @@ repositories {
 
 dependencies {
     compile spring.web,spring.webmvc,spring.core,spring.beans,spring.expression,spring.contextSupport
-    compile mongoDB,spring.mongo,fasterXml
+    compile mongoDB,spring.mongo,fasterXml,javax.jstl
     compile commons.fileupload,commons.io,commons.xmlapis
     testCompile junit
 }

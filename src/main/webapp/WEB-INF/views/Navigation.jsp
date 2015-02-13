@@ -1,4 +1,4 @@
-<nav role="navigation" class="navbar navbar-default">
+<nav role="navigation" class="navbar navbar-inverse">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="${pageContext.request.contextPath}/food/home" class="navbar-brand">Newtrino <span class="glyphicon glyphicon-leaf"></span></a>
+          <a href="${pageContext.request.contextPath}/product/home" class="navbar-brand">Newtrino <span class="glyphicon glyphicon-leaf"></span></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -25,7 +25,7 @@
                 <%--<button type="submit" class="btn btn-default">Search</button>--%>
            <%--</form>--%>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Developer - Anand Muley</a></li>
+                <li><a href="#" class="developer-text">Developer - Anand Muley</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
