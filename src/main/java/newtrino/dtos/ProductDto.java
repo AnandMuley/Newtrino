@@ -3,11 +3,14 @@ package newtrino.dtos;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductDto implements Comparable{
+public class ProductDto extends SearchDto implements Comparable {
 
     private String id;
     private String name;
     private List<NutrientDto> nutrientDtos = new ArrayList<>();
+
+    public ProductDto() {
+    }
 
     public ProductDto(String id, String name) {
         this.id = id;

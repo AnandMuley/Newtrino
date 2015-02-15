@@ -37,3 +37,6 @@
 <!-- Overriding -->
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css" media="screen, handheld" />
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/newtrino.css" />
+
+<!-- Custom JS -->
+<script type="application/javascript" src="${pageContext.request.contextPath}/resources/js/DomManupulator.js"></script>

@@ -3,6 +3,7 @@ package newtrino.services;
 import newtrino.beans.Product;
 import newtrino.daos.ProductDao;
 import newtrino.dtos.ProductDto;
+import newtrino.dtos.SearchResponseJsonDto;
 import newtrino.utils.BeanCreatorUtil;
 import newtrino.utils.DtoCreatorUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,5 +34,11 @@ public class ProductServiceImpl implements ProductService{
     public Set<ProductDto> fetchAll() {
         List<Product> products = productDao.fetchAll();
         return dtoCreatorUtil.createProductDtos(products);
+    }
+
+    @Override
+    public List<SearchResponseJsonDto> search(ProductDto productDto) {
+        List<Product> products = productDao.searchByName(productDto.getTerm());
+        return dtoCreatorUtil.createSearchResponseDtos(products);
     }
 }

@@ -127,3 +127,33 @@ a.list-group-item:focus, a.list-group-item:hover{
     background-color: #09AE85 !important;
     color: white !important;
 }
+
+.consumption-table thead{
+    background-color: #09AE85;
+    color:white;
+}
+
+.glyphicon-plus{
+    cursor: pointer;
+}
+
+.glyphicon-plus:hover{
+    color: #08795a;
+}
+
+
+
+.consumption-panel-heading,.panel-default>.panel-heading{
+    background-image: none;
+    background-color: #09AE85 !important;
+    color : white;
+}
+
+.consumption-panel-heading h4,.consumption-panel-heading-text{
+    font-size: 22px !important;
+    text-align: center;
+}
+
+.consumption-quantity-text{
+    color : #947B88;
+}

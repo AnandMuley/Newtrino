@@ -10,6 +10,7 @@ def JUnitVersion = '4.11'
 def MongoVersion = '2.12.2'
 def SpringDataMongoVersion = '1.6.0.RELEASE'
 def JacksonVersion = '2.2.3'
+def TestNGVersion = '5.7'
 
 httpPort=8093
 
@@ -30,6 +31,7 @@ ext{
     ]
 
     junit = "junit:junit:${JUnitVersion}"
+    testNG = 'org.testng:testng:${TestNGVersion}'
 
     mongoDB = "org.mongodb:mongo-java-driver:${MongoVersion}"
 

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Anand Muley
-  Date: 02/01/15
-  Time: 22:16
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -52,7 +45,7 @@
         </a>
       </div>
       <div class="col-sm-6 col-md-2">
-        <a href="add" class="thumbnail" style="text-decoration: none">
+        <a href="${pageContext.request.contextPath}/consumption/home" class="thumbnail" style="text-decoration: none">
           <img class="images-bg" src="../resources/images/Consumed.png" data-src="holder.js/100x100" alt="..." width="100">
           <div class="caption" align="center">
             <h3>Consumed</h3>
