@@ -113,20 +113,7 @@ a.list-group-item:focus, a.list-group-item:hover{
     color : #09AE85;
 }
 
-.thumbnail h3{
-    color : #08795a;
-}
 
-.thumbnail{
-    background-color: #f5f9f7 !important;
-    color: #09AE85 !important;
-    border : solid 1px #09AE85;
-}
-
-.thumbnail:hover{
-    background-color: #09AE85 !important;
-    color: white !important;
-}
 
 .consumption-table thead{
     background-color: #09AE85;
@@ -141,19 +128,76 @@ a.list-group-item:focus, a.list-group-item:hover{
     color: #08795a;
 }
 
-
-
-.consumption-panel-heading,.panel-default>.panel-heading{
-    background-image: none;
-    background-color: #09AE85 !important;
-    color : white;
+.title-text h4{
+   color:#09AE85;
+   font-size: 22px !important;
 }
 
-.consumption-panel-heading h4,.consumption-panel-heading-text{
-    font-size: 22px !important;
+.products-thumbnail{
+    cursor: pointer;
     text-align: center;
 }
 
-.consumption-quantity-text{
-    color : #947B88;
+.panel-title{
+    color : white;
+}
+
+.panel-default>.panel-heading{
+    background-image: none;
+    background-color: #09ae85 !important;
+    border: solid 1px #09AE85;
+    padding: 13px 0px 13px 0px;
+    text-align: center;
+}
+
+.panel-default>.panel-heading h3{
+    font-size: 22px;
+}
+
+.thumbnail{
+    background-color: #E4E4E4 !important;
+    color: #09AE85 !important;
+    border : solid 1px #BDBDBD;
+}
+
+.thumbnail:hover{
+    background-color: #fe7a15 !important;
+    color: white !important;
+    border : solid 1px #fe7a15;
+}
+
+.caption{
+    color : inherit !important;
+    text-align: center;
+}
+
+.font-product-name{
+    font-size: 50px;
+    padding : 5px 0px 5px 15px !important;
+    height: 80px !important;
+    border-radius: 2px !important;
+}
+
+.font-product-quantity{
+    font-size: 30px;
+    padding : 5px 0px 5px 15px !important;
+    height: 50px !important;
+    border-radius: 4px !important;
+}
+
+.new-product-thumbnail{
+    border:solid 1px #D9DDDB;
+    color: #B2B2B2 !important;
+    font-size: 20px;
+}
+
+.new-product-thumbnail:hover{
+    border:solid 1px #B2B2B2 !important;
+    background-color: #E5E5E5 !important;
+    color: #B2B2B2 !important;
+    cursor: pointer;
+}
+
+.panel-body{
+    background-color: #EFF3F1;
 }

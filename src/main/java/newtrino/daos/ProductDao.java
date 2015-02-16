@@ -11,4 +11,5 @@ public interface ProductDao {
     List<Product> fetchAll();
 
     List<Product> searchByName(String name);
+
 }

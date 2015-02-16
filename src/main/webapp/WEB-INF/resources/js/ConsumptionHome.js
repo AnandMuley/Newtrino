@@ -7,6 +7,10 @@ $(document).ready(function(){
 
     $('#searchBox').autocomplete({
         source: "../product/search",
-        minLength: 2
+        minLength: 2,
+        select: function( event, ui ) {
+            $('#searchBox').val(ui.item.value);
+            $('#searchFrm').submit();
+        }
     });
 });

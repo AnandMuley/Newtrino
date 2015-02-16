@@ -7,4 +7,6 @@ public interface ViewNames {
 
     String FOLDER_CONSUME = "consume/";
     String CONSUMPTION_HOME = FOLDER_CONSUME + "ConsumptionHome";
+
+    String INDEX = "Index";
 }

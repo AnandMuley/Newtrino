@@ -1,10 +1,16 @@
 package newtrino.beans;
 
+import newtrino.utils.DBCollections;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Document(collection = DBCollections.PRODUCTS)
 public class Product implements Comparable{
 
+    @Id
     private String id;
     private String name;
     private List<Nutrient> nutrients = new ArrayList<>();

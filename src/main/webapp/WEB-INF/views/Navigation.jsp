@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="${pageContext.request.contextPath}/product/home" class="navbar-brand">Newtrino <span class="glyphicon glyphicon-leaf"></span></a>
+          <a href="${pageContext.request.contextPath}/index" class="navbar-brand">Newtrino <span class="glyphicon glyphicon-leaf"></span></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

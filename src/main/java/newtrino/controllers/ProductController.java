@@ -1,5 +1,6 @@
 package newtrino.controllers;
 
+import com.mongodb.gridfs.GridFSDBFile;
 import newtrino.dtos.ProductDto;
 import newtrino.dtos.SearchResponseJsonDto;
 import newtrino.services.ProductService;
@@ -12,6 +13,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.List;
 import java.util.Set;
 
@@ -21,11 +26,6 @@ public class ProductController {
 
     @Autowired
     private ProductService productService;
-
-    @RequestMapping("home")
-    public String renderHome(){
-        return ViewNames.PRODUCT_HOME;
-    }
 
     @RequestMapping("add")
     public String renderAddProduct(Model model){
@@ -45,6 +45,19 @@ public class ProductController {
     @RequestMapping("search")
     public List<SearchResponseJsonDto> searchProduct(ProductDto productDto){
         return productService.search(productDto);
+    }
+
+    @RequestMapping(value = "fetchimage")
+    public void fetchProductImage(HttpServletRequest request,HttpServletResponse response,String imageId) {
+        try {
+            GridFSDBFile userProfilePic = productService.fetchProductPic(imageId);
+            OutputStream outputStream = response.getOutputStream();
+            userProfilePic.writeTo(outputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e){
+            System.out.println("Profile pic not set yet");
+        }
     }
 
 }

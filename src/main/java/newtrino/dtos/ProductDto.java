@@ -1,13 +1,16 @@
 package newtrino.dtos;
 
-import java.util.ArrayList;
+import org.springframework.web.multipart.MultipartFile;
+
 import java.util.List;
 
 public class ProductDto extends SearchDto implements Comparable {
 
     private String id;
     private String name;
-    private List<NutrientDto> nutrientDtos = new ArrayList<>();
+    private MultipartFile prodImg;
+    private String quantity;
+    private List<NutrientDto> nutrientDtos;
 
     public ProductDto() {
     }
@@ -39,6 +42,22 @@ public class ProductDto extends SearchDto implements Comparable {
 
     public void setNutrientDtos(List<NutrientDto> nutrientDtos) {
         this.nutrientDtos = nutrientDtos;
+    }
+
+    public MultipartFile getProdImg() {
+        return prodImg;
+    }
+
+    public void setProdImg(MultipartFile prodImg) {
+        this.prodImg = prodImg;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
     }
 
     @Override

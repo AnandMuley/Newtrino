@@ -42,6 +42,10 @@ ext{
             io : "commons-io:commons-io:2.4",
             xmlapis : "xml-apis:xml-apis:1.4.01"
     ]
+
+    servlet = [
+            api : 'javax.servlet:servlet-api:2.5'
+    ]
 }
 
 repositories {
@@ -52,5 +56,6 @@ dependencies {
     compile spring.web,spring.webmvc,spring.core,spring.beans,spring.expression,spring.contextSupport
     compile mongoDB,spring.mongo,fasterXml,javax.jstl
     compile commons.fileupload,commons.io,commons.xmlapis
+    providedCompile servlet.api
     testCompile junit
 }

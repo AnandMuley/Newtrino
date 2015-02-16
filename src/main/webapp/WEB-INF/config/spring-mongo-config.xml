@@ -34,4 +34,10 @@
         <constructor-arg name="mongoConverter" ref="mappingMongoConverter" />
     </bean>
 
+    <!-- Spring Data Mongo DB GridFS -->
+    <bean id="gridFsTemplate" class="org.springframework.data.mongodb.gridfs.GridFsTemplate">
+        <constructor-arg index="0" ref="mongoDbFactory"/>
+        <constructor-arg index="1" ref="mappingMongoConverter"/>
+    </bean>
+
 </beans>

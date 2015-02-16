@@ -1,5 +1,6 @@
 package newtrino.services;
 
+import com.mongodb.gridfs.GridFSDBFile;
 import newtrino.dtos.ProductDto;
 import newtrino.dtos.SearchResponseJsonDto;
 
@@ -13,5 +14,7 @@ public interface ProductService {
     Set<ProductDto> fetchAll();
 
     List<SearchResponseJsonDto> search(ProductDto productDto);
+
+    GridFSDBFile fetchProductPic(String id);
 
 }
