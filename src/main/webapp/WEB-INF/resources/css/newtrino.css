@@ -140,12 +140,13 @@ a.list-group-item:focus, a.list-group-item:hover{
 
 .panel-title{
     color : white;
+    font-size: 30px !important;
 }
 
 .panel-default>.panel-heading{
     background-image: none;
-    background-color: #09ae85 !important;
-    border: solid 1px #09AE85;
+    background-color: #B1B1B1 !important;
+    border: solid 1px #B1B1B1;
     padding: 13px 0px 13px 0px;
     text-align: center;
 }

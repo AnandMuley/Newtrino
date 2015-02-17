@@ -11,4 +11,5 @@ public interface ConsumptionDao {
 
     List<Consumption> consumedOn(Date startDate,Date endDate);
 
+    Consumption changeConsumptionQuantity(String productName,Integer changeVal);
 }

@@ -3,12 +3,12 @@ package newtrino.beans;
 public class Unit {
 
     private String type;
-    private long quantity;
+    private double quantity;
 
     public Unit() {
     }
 
-    public Unit(String type, long quantity) {
+    public Unit(String type, double quantity) {
         this.type = type;
         this.quantity = quantity;
     }
@@ -21,11 +21,11 @@ public class Unit {
         this.type = type;
     }
 
-    public long getQuantity() {
+    public double getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(long quantity) {
+    public void setQuantity(double quantity) {
         this.quantity = quantity;
     }
 

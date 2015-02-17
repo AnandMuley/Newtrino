@@ -12,4 +12,5 @@ public interface ProductDao {
 
     List<Product> searchByName(String name);
 
+    void delete(String productName);
 }

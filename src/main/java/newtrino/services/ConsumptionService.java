@@ -11,4 +11,5 @@ public interface ConsumptionService {
 
     Set<ConsumptionDto> productsConsumedOn(Date date);
 
+    ConsumptionDto changeConsumptionQuantity(String productName,Integer opr);
 }

@@ -3,12 +3,12 @@ package newtrino.dtos;
 public class UnitDto {
 
     private String type;
-    private long quantity;
+    private double quantity;
 
     public UnitDto() {
     }
 
-    public UnitDto(long quantity,String type) {
+    public UnitDto(double quantity,String type) {
         this.type = type;
         this.quantity = quantity;
     }
@@ -21,11 +21,11 @@ public class UnitDto {
         this.type = type;
     }
 
-    public long getQuantity() {
+    public double getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(long quantity) {
+    public void setQuantity(double quantity) {
         this.quantity = quantity;
     }
 

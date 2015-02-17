@@ -13,7 +13,7 @@ public class Consumption {
     @Id
     private String id;
     private String productName;
-    private long quantity;
+    private int quantity;
     private Date consumptionTime;
 
     public Consumption() {
@@ -40,11 +40,11 @@ public class Consumption {
         this.productName = productName;
     }
 
-    public long getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(long quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
@@ -55,6 +55,11 @@ public class Consumption {
     public void setConsumptionTime(Date consumptionTime) {
         this.consumptionTime = consumptionTime;
     }
+
+    public void changeConsumptionQuantity(int changeVal){
+        this.quantity+=changeVal;
+    }
+
 
     @Override
     public String toString() {

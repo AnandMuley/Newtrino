@@ -24,11 +24,11 @@
   <div class="row">
       <c:forEach items="${consumptions}" var="consumption">
           <div class="col-lg-2">
-              <div class="thumbnail products-thumbnail" title="Increment - Click : Decrement : Double Click">
+              <div class="thumbnail products-thumbnail consumedProd" title="${consumption.productName}">
                   <h3>${consumption.productName}</h3>
                   <img src="${pageContext.request.contextPath}/product/fetchimage?imageId=${consumption.productName}" alt="..." width="50">
                   <div class="caption">
-                      <p>${consumption.quantity}</p>
+                      <span id="${consumption.productName}">${consumption.quantity}</span>
                   </div>
               </div>
           </div>

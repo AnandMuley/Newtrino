@@ -13,4 +13,35 @@ $(document).ready(function(){
             $('#searchFrm').submit();
         }
     });
+
+    $('.consumedProd').mousedown(function(e){
+        // Title : this.title
+        var title = this.title;
+        switch (e.which){
+            case 1:
+                // left click
+                // Increment Consumption Count
+                $.ajax({
+                    type : "POST",
+                    url : "changequantity",
+                    data : {pname:title,opr:1}
+                }).done(function(msg){
+                    $('#'+title).html(msg.quantity);
+                });
+                break;
+            case 2:
+                // middle click
+                // Decrement Consumption
+                $.ajax({
+                    type : "POST",
+                    url : "changequantity",
+                    data : {pname:title,opr:-1}
+                }).done(function(msg){
+                    $('#'+title).html(msg.quantity);
+                });
+                break;
+        }
+
+    });
+
 });

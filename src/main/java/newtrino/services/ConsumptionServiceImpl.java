@@ -40,4 +40,20 @@ public class ConsumptionServiceImpl implements ConsumptionService{
         List<Consumption> consumptions = consumptionDao.consumedOn(today, endDate);
         return dtoCreatorUtil.createConsumptions(consumptions);
     }
+
+    @Override
+    public ConsumptionDto changeConsumptionQuantity(String productName,Integer opr) {
+        Consumption consumption = null;
+
+        switch (opr){
+            case 1 :
+                 consumption = consumptionDao.changeConsumptionQuantity(productName, 1);
+                break;
+            case -1 :
+                consumption = consumptionDao.changeConsumptionQuantity(productName,-1);
+                break;
+        }
+
+        return dtoCreatorUtil.createConsumptionDto(consumption);
+    }
 }

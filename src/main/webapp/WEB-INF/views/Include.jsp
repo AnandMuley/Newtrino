@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css" media="screen, handheld" />
 
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/jquery.autocomplete.css" />
-
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/jquery-ui.css" />
 
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/jquery-ui-1.10.0.custom.min.js"></script>
@@ -18,7 +18,7 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/jquery.tagsinput.js"></script>
 
 
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/jquery-ui.css" />
+
 
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/moment.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/timepicker.js"></script>

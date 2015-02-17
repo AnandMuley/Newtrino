@@ -15,6 +15,37 @@ $(document).ready(function(){
         $('#imageSubText').text('Image Preview').css('color','#09AE85');
     });
 
+    $('.catalogueItem').mousedown(function(e){
+        var title = this.title;
+        if(e.which == 2){
+            $.ajax({
+                type: "POST",
+                url : "delete",
+                data : {pname:title}
+            }).done(function(msg){
+                if(msg == "success"){
+                    // Something went wrong
+                    $('#prodItem_'+title).remove();
+                }
+            });
+        }
+
+    });
+
+    $('#nutrientsModal').on('show.bs.modal',function(event){
+        var imgThumbnail = $(event.relatedTarget);
+        var prodName = imgThumbnail.data('title');
+
+        // Update modal contents
+        var modal = $(this);
+        modal.find('.modal-title').text('Nutrients in '+prodName);
+
+        var nutrients = $('#nutrients_'+prodName).html();
+        modal.find('.modal-body').html(nutrients);
+
+
+    });
+
 });
 
 function fetchPreviewImage(input) {

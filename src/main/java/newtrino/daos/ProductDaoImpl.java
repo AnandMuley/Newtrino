@@ -34,4 +34,10 @@ public class ProductDaoImpl implements ProductDao{
         Query query = Query.query(Criteria.where("name").regex(name,"i"));
         return mongoOperations.find(query,Product.class,DBCollections.PRODUCTS);
     }
+
+    @Override
+    public void delete(String productName) {
+        Query query = Query.query(Criteria.where("name").is(productName));
+        mongoOperations.remove(query,Product.class);
+    }
 }

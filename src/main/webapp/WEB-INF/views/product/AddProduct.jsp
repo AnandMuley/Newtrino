@@ -7,13 +7,14 @@
   <%@ include file="../Include.jsp"%>
   <title>Add Product</title>
   <script type="application/javascript" src="${pageContext.request.contextPath}/resources/js/ProductHome.js"></script>
+
 </head>
 <body>
 <%@include file="../Navigation.jsp"%>
 <div class="jumbotron" align="center">
 
   <form role="form" action="addnew" method="post" enctype="multipart/form-data">
-  <div class="row">
+    <div class="row">
 
     <div class="col-lg-4">
         <div class="row">
@@ -58,13 +59,13 @@
           </div>
         </div>
     </div>
-  </div>
-  <div class="row container-save-food">
-    <div class="col-xs-12 col-lg-12">
-      <button type="submit" class="btn btn-lg button" href="#" role="button">Save</button>
     </div>
-  </div>
-</form>
+    <div class="row container-save-food">
+      <div class="col-xs-12 col-lg-12">
+        <button type="submit" class="btn btn-lg button" href="#" role="button">Save</button>
+      </div>
+    </div>
+  </form>
       <c:if test="${message!=null}">
         <div class="row">
           <div class="alert alert-success col-xs-12 col-lg-12">
@@ -73,28 +74,50 @@
         </div>
 
       </c:if>
-    </div>
-  </div
+
+
   <div class="row">
     <div class="col-xs-12 col-lg-12">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Product Catalogue</h3>
+          <h3 class="panel-title">My Product Catalogue</h3>
         </div>
+        <!--Modal-->
+        <div id="nutrientsModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="nutrientsModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="nutrientsModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div align="center" class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
         <div class="panel-body">
           <c:forEach items="${products}" var="product">
-            <div class="col-lg-2">
-              <div class="thumbnail products-thumbnail">
-                <h4>${product.name}</h4>
+            <div id="prodItem_${product.name}" class="col-lg-3 prodCatItem">
+              <div class="thumbnail products-thumbnail catalogueItem" title="${product.name}" data-title="${product.name}"  data-toggle="modal" data-target="#nutrientsModal">
+                <h3>${product.name}</h3>
                 <img src="fetchimage?imageId=${product.name}" alt="..." width="80">
-                <div class="caption">
+                <div id="nutrients_${product.name}" class="caption">
                   <c:forEach items="${product.nutrientDtos}" var="nutrient">
-                    <c:out value="${nutrient.name}"></c:out><br>
+                    <div style="text-align: left"><c:out value="${nutrient.name} : ${nutrient.unitDto.quantity} ${nutrient.unitDto.type}"></c:out></div>
                   </c:forEach>
                 </div>
               </div>
             </div>
           </c:forEach>
+          <c:if test="${fn:length(products)==0}">
+            <div style="color : #8f8f8f" align="center">
+              <h4>No products present in database</h4>
+            </div>
+          </c:if>
         </div>
       </div>
     </div>

@@ -59,4 +59,14 @@ public class ProductServiceImpl implements ProductService{
         }
         return gridFSDBFile;
     }
+
+    @Override
+    public void deleteProduct(String productName) {
+        // Delete Product Image
+        GridFSDBFile gridFSDBFile = fetchProductPic(productName);
+        if(null != gridFSDBFile){
+            gridFsTemplate.delete(Query.query(GridFsCriteria.whereFilename().is(productName)));
+        }
+        productDao.delete(productName);
+    }
 }

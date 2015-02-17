@@ -28,4 +28,13 @@ public class ConsumptionDaoImpl implements ConsumptionDao{
         Query query = Query.query(Criteria.where("consumptionTime").lt(endDate));
         return mongoOperations.find(query,Consumption.class);
     }
+
+    @Override
+    public Consumption changeConsumptionQuantity(String productName,Integer changeVal) {
+        Query query = Query.query(Criteria.where("productName").is(productName));
+        Consumption consumption = mongoOperations.findOne(query,Consumption.class);
+        consumption.changeConsumptionQuantity(changeVal);
+        mongoOperations.save(consumption);
+        return consumption;
+    }
 }

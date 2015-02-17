@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -39,6 +40,13 @@ public class ProductController {
         productService.add(productDto);
         model.addAttribute(Models.MESSAGE, Messages.PRODUCT_ADD_SUCCESS);
         return renderAddProduct(model);
+    }
+
+    @ResponseBody
+    @RequestMapping("delete")
+    public String deleteProduct(@RequestParam("pname") String productName){
+        productService.deleteProduct(productName);
+        return Messages.SUCCESS;
     }
 
     @ResponseBody

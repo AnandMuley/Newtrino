@@ -17,4 +17,5 @@ public interface ProductService {
 
     GridFSDBFile fetchProductPic(String id);
 
+    void deleteProduct(String productName);
 }

@@ -20,7 +20,7 @@ public class DtoCreatorUtil {
         return consumptionDtos;
     }
 
-    private ConsumptionDto createConsumptionDto(Consumption consumption) {
+    public ConsumptionDto createConsumptionDto(Consumption consumption) {
         return new ConsumptionDto(consumption.getId(),consumption.getProductName(),consumption.getQuantity(),consumption.getConsumptionTime());
     }
 

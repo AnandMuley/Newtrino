@@ -6,13 +6,13 @@ public class ConsumptionDto implements  Comparable{
 
     private String id;
     private String productName;
-    private long quantity;
+    private int quantity;
     private Date consumptionTime;
 
     public ConsumptionDto() {
     }
 
-    public ConsumptionDto(String id, String productName, long quantity, Date consumptionTime) {
+    public ConsumptionDto(String id, String productName, int quantity, Date consumptionTime) {
         this.id = id;
         this.productName = productName;
         this.quantity = quantity;
@@ -35,11 +35,11 @@ public class ConsumptionDto implements  Comparable{
         this.productName = productName;
     }
 
-    public long getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(long quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
