@@ -78,10 +78,7 @@
 
   <div class="row">
     <div class="col-xs-12 col-lg-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">My Product Catalogue</h3>
-        </div>
+      <h3 class="panel-title">Available Products</h3>
         <!--Modal-->
         <div id="nutrientsModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="nutrientsModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-sm">
@@ -119,7 +116,6 @@
             </div>
           </c:if>
         </div>
-      </div>
     </div>
   </div>
 

@@ -139,16 +139,10 @@ a.list-group-item:focus, a.list-group-item:hover{
 }
 
 .panel-title{
-    color : white;
+    color : #09AE85;
     font-size: 30px !important;
-}
-
-.panel-default>.panel-heading{
-    background-image: none;
-    background-color: #B1B1B1 !important;
-    border: solid 1px #B1B1B1;
-    padding: 13px 0px 13px 0px;
-    text-align: center;
+    padding: 10px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
 }
 
 .panel-default>.panel-heading h3{

@@ -3,27 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7151026d-7bd5-435c-88ff-80b777f89a3c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/AddProduct.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/AddProduct.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/beans/Consumption.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/beans/Consumption.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/controllers/ConsumptionController.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/controllers/ConsumptionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/daos/ConsumptionDao.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/daos/ConsumptionDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/daos/ConsumptionDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/daos/ConsumptionDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/dtos/ConsumptionDto.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/dtos/ConsumptionDto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/ConsumptionHome.js" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/ConsumptionHome.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/consume/ConsumptionHome.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/consume/ConsumptionHome.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/services/ConsumptionService.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/services/ConsumptionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/services/ConsumptionServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/services/ConsumptionServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/utils/DtoCreatorUtil.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/utils/DtoCreatorUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Include.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Include.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/utils/Messages.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/utils/Messages.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Newtrino.iws" afterPath="$PROJECT_DIR$/Newtrino.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/controllers/ProductController.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/controllers/ProductController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/daos/ProductDao.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/daos/ProductDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/daos/ProductDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/daos/ProductDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/ProductHome.js" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/ProductHome.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/services/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/services/ProductService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/services/ProductServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/services/ProductServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/beans/Unit.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/beans/Unit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/dtos/UnitDto.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/dtos/UnitDto.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/newtrino.css" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/newtrino.css" />
     </list>
     <ignored path="Newtrino.iws" />
@@ -88,21 +67,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AddProduct.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddProduct.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/AddProduct.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.110707805" vertical-offset="1501" max-vertical-offset="2430">
-              <caret line="80" column="6" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
+            <state vertical-scroll-proportion="-9.740741" vertical-offset="1177" max-vertical-offset="2358">
+              <caret line="80" column="48" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newtrino.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="newtrino.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/newtrino.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2433" max-vertical-offset="3780">
-              <caret line="141" column="17" selection-start-line="141" selection-start-column="17" selection-end-line="141" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.26903552" vertical-offset="2433" max-vertical-offset="3672">
+              <caret line="144" column="30" selection-start-line="144" selection-start-column="30" selection-end-line="144" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -1340,12 +1319,12 @@
       <workItem from="1423988959697" duration="21518000" />
       <workItem from="1424024427250" duration="1732000" />
       <workItem from="1424030104936" duration="15691000" />
-      <workItem from="1424116846160" duration="11630000" />
+      <workItem from="1424116846160" duration="12213000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74607000" />
+    <option name="totallyTimeSpent" value="75190000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -1835,18 +1814,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/newtrino.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/AddProduct.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2433" max-vertical-offset="3780">
-          <caret line="141" column="17" selection-start-line="141" selection-start-column="17" selection-end-line="141" selection-end-column="17" />
+        <state vertical-scroll-proportion="-9.740741" vertical-offset="1177" max-vertical-offset="2358">
+          <caret line="80" column="48" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/AddProduct.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/newtrino.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.110707805" vertical-offset="1501" max-vertical-offset="2430">
-          <caret line="80" column="6" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.26903552" vertical-offset="2433" max-vertical-offset="3672">
+          <caret line="144" column="30" selection-start-line="144" selection-start-column="30" selection-end-line="144" selection-end-column="30" />
           <folding />
         </state>
       </provider>
