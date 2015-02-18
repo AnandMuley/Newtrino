@@ -32,7 +32,7 @@ public class ProductController {
     public String renderAddProduct(Model model){
         Set<ProductDto> productDtos = productService.fetchAll();
         model.addAttribute(Models.PRODUCTS,productDtos);
-        return ViewNames.ADD_PRODUCT;
+        return ViewNames.PRODUCT_HOME;
     }
 
     @RequestMapping("addnew")

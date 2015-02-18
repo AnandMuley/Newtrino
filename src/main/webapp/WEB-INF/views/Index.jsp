@@ -53,7 +53,7 @@
 			</a>
 		</div>
 		<div class="col-sm-6 col-md-2">
-			<a href="add" class="thumbnail" style="text-decoration: none">
+			<a href="${pageContext.request.contextPath}/reports/home" class="thumbnail" style="text-decoration: none">
 				<img class="images-bg" src="${pageContext.request.contextPath}/resources/images/CurrentStatus.png" data-src="holder.js/100x100" alt="..." width="100">
 				<div class="caption" align="center">
 					<h3>Current Status</h3>
