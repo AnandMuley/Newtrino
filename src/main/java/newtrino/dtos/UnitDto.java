@@ -4,6 +4,7 @@ public class UnitDto {
 
     private String type;
     private double quantity;
+    private double maxQuantity;
 
     public UnitDto() {
     }
@@ -27,6 +28,14 @@ public class UnitDto {
 
     public void setQuantity(double quantity) {
         this.quantity = quantity;
+    }
+
+    public double getMaxQuantity() {
+        return maxQuantity;
+    }
+
+    public void setMaxQuantity(double maxQuantity) {
+        this.maxQuantity = maxQuantity;
     }
 
     @Override

@@ -6,7 +6,7 @@ public class ConsumptionDto implements  Comparable{
 
     private String id;
     private String productName;
-    private int quantity;
+    private double quantity;
     private Date consumptionTime;
 
     public ConsumptionDto() {
@@ -35,11 +35,11 @@ public class ConsumptionDto implements  Comparable{
         this.productName = productName;
     }
 
-    public int getQuantity() {
+    public double getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(double quantity) {
         this.quantity = quantity;
     }
 

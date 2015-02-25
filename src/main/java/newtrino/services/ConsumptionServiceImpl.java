@@ -37,7 +37,8 @@ public class ConsumptionServiceImpl implements ConsumptionService{
     @Override
     public Set<ConsumptionDto> productsConsumedOn(Date today) {
         Date endDate = dateConverterUtil.calculateEndDate(today);
-        List<Consumption> consumptions = consumptionDao.consumedOn(today, endDate);
+        Date startDate = dateConverterUtil.calculateStartDate(today);
+        List<Consumption> consumptions = consumptionDao.consumedOn(startDate, endDate);
         return dtoCreatorUtil.createConsumptions(consumptions);
     }
 

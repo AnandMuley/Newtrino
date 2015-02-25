@@ -166,6 +166,10 @@ a.list-group-item:focus, a.list-group-item:hover{
     text-align: center;
 }
 
+.demo{
+    color : #9efee8;
+}
+
 .font-product-name{
     font-size: 50px;
     padding : 5px 0px 5px 15px !important;

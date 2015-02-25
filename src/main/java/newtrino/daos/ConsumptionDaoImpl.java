@@ -25,7 +25,7 @@ public class ConsumptionDaoImpl implements ConsumptionDao{
 
     @Override
     public List<Consumption> consumedOn(Date startDate,Date endDate) {
-        Query query = Query.query(Criteria.where("consumptionTime").lt(endDate));
+        Query query = Query.query(Criteria.where("consumptionTime").gt(startDate));
         return mongoOperations.find(query,Consumption.class);
     }
 

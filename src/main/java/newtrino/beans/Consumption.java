@@ -19,6 +19,12 @@ public class Consumption {
     public Consumption() {
     }
 
+    public Consumption(String productName, int quantity, Date consumptionTime) {
+        this.productName = productName;
+        this.quantity = quantity;
+        this.consumptionTime = consumptionTime;
+    }
+
     public Consumption(String productName, Date consumptionTime) {
         this.productName = productName;
         this.consumptionTime = consumptionTime;

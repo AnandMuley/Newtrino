@@ -10,6 +10,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Pattern;
 
 @Repository
@@ -39,5 +40,11 @@ public class ProductDaoImpl implements ProductDao{
     public void delete(String productName) {
         Query query = Query.query(Criteria.where("name").is(productName));
         mongoOperations.remove(query,Product.class);
+    }
+
+    @Override
+    public List<Product> fetchAll(Set<String> productNames) {
+        Query query = Query.query(Criteria.where("name").in(productNames));
+        return mongoOperations.find(query,Product.class);
     }
 }

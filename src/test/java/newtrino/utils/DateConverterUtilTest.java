@@ -1,13 +1,12 @@
 package newtrino.utils;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Calendar;
 import java.util.Date;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 public class DateConverterUtilTest {
 
@@ -27,14 +26,12 @@ public class DateConverterUtilTest {
         Date actual = dateConverterUtil.calculateEndDate(today);
 
         // Then
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(actual);
         assertTrue(today.before(actual));
-        assertTrue(actual.getMinutes()==0);
-        assertTrue(actual.getHours()==0);
-        assertTrue(actual.getSeconds()==0);
+        assertTrue(calendar.get(Calendar.MINUTE)==0);
+        assertTrue(calendar.get(Calendar.HOUR_OF_DAY)==0);
+        assertTrue(calendar.get(Calendar.SECOND)==0);
     }
 
-    @After
-    public void tearDown() throws Exception {
-
-    }
 }

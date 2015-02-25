@@ -14,9 +14,9 @@
 <body>
 <%@include file="../Navigation.jsp"%>
 <div class="jumbotron" align="center">
-  <h3>Reports Home</h3>
   <!--Div that will hold the pie chart-->
-  <div id="chart_div"></div>
+  <div id="reportsContainer" class="row">
+  </div>
 </div>
 </body>
 </html>
