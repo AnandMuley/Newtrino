@@ -67,11 +67,12 @@ public class ConsumptionDaoImplTest extends ConsumptionRefDao{
         Date today = new Date();
         Consumption consumption = new Consumption(name,1,today);
         Date endDate = dateConverterUtil.calculateEndDate(today);
+        Date startDate = dateConverterUtil.calculateStartDate(today);
         final int expectedSize = 1;
 
         // When
         consumptionDao.createNew(consumption);
-        List<Consumption> consumptions = consumptionDao.consumedOn(today,endDate);
+        List<Consumption> consumptions = consumptionDao.consumedOn(startDate,endDate);
 
         // Then
         Assert.assertEquals(expectedSize,consumptions.size());
