@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7151026d-7bd5-435c-88ff-80b777f89a3c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/newtrino/daos/ConsumptionRefDao.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/newtrino/utils/BeanCreatorUtil.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/utils/BeanCreatorUtilImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/newtrino/utils/DateConverterUtil.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/utils/DateConverterUtilImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/newtrino/daos/ConsumptionDaoImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/newtrino/daos/ConsumptionDaoTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/newtrino/services/ReportingServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/newtrino/services/ReportingServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/newtrino/config/BootstrapJunit.java" afterPath="$PROJECT_DIR$/src/test/java/newtrino/config/BootstrapJunit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/services/ConsumptionServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/services/ConsumptionServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/newtrino/utils/DateConverterUtilTest.java" afterPath="$PROJECT_DIR$/src/test/java/newtrino/utils/DateConverterUtilTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Newtrino.iml" afterPath="$PROJECT_DIR$/Newtrino.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Newtrino.ipr" afterPath="$PROJECT_DIR$/Newtrino.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Newtrino.iws" afterPath="$PROJECT_DIR$/Newtrino.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/beans/Product.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/beans/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/dtos/ProductDto.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/dtos/ProductDto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/services/ProductServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/services/ProductServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/services/ReportingServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/services/ReportingServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/newtrino/common/TestDataUtils.java" afterPath="$PROJECT_DIR$/src/test/java/newtrino/common/TestDataUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-    </list>
+    <list default="true" id="7151026d-7bd5-435c-88ff-80b777f89a3c" name="Default" comment="" />
     <ignored path="Newtrino.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -1684,12 +1666,12 @@
       <workItem from="1424910162109" duration="779000" />
       <workItem from="1424943529099" duration="657000" />
       <workItem from="1424969870511" duration="274000" />
-      <workItem from="1424976036676" duration="18828000" />
+      <workItem from="1424976036676" duration="18898000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162689000" />
+    <option name="totallyTimeSpent" value="162759000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
