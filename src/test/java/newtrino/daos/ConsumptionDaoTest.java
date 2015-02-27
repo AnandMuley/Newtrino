@@ -1,6 +1,7 @@
 package newtrino.daos;
 
 import newtrino.beans.Consumption;
+import newtrino.common.CommonDao;
 import newtrino.utils.DateConverterUtil;
 import org.junit.After;
 import org.junit.Assert;
@@ -21,27 +22,10 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:/config/application-config.xml")
-public class ConsumptionDaoImplTest extends ConsumptionRefDao{
+public class ConsumptionDaoTest extends CommonDao<Consumption>{
 
     @Autowired
     private ConsumptionDao consumptionDao;
-
-    @Autowired
-    private MongoTemplate mongoTemplate;
-
-    @Autowired
-    private DateConverterUtil dateConverterUtil;
-
-    @Before
-    public void setUp() throws Exception {
-        mongoTemplate.getDb().dropDatabase();
-    }
-
-    @After
-    public void cleanUp() throws Exception {
-        mongoTemplate.getDb().dropDatabase();
-    }
 
     @Test
     public void testCreateNew() throws Exception {
@@ -53,7 +37,7 @@ public class ConsumptionDaoImplTest extends ConsumptionRefDao{
 
         // When
         consumptionDao.createNew(consumption);
-        Consumption consumptionPersisted = super.findByName(name);
+        Consumption consumptionPersisted = super.findByField("productName", name, Consumption.class);
 
         // Then
         Assert.assertNotNull(consumptionPersisted);
@@ -113,7 +97,7 @@ public class ConsumptionDaoImplTest extends ConsumptionRefDao{
         // When
         consumptionDao.createNew(consumption);
         consumptionDao.changeConsumptionQuantity(name,expectedQuantity);
-        Consumption actualConsumption = super.findByName(name);
+        Consumption actualConsumption = super.findByField("productName", name, Consumption.class);
 
         // Then
         Assert.assertEquals(expectedQuantity+1,actualConsumption.getQuantity());

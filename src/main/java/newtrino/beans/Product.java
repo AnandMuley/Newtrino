@@ -22,6 +22,11 @@ public class Product implements Comparable{
         this.name = name;
     }
 
+    public Product(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public String getId() {
         return id;
     }

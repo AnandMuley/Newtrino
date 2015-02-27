@@ -6,8 +6,9 @@ import java.util.Calendar;
 import java.util.Date;
 
 @Component
-public class DateConverterUtil {
+public class DateConverterUtilImpl implements DateConverterUtil{
 
+    @Override
     public Date calculateEndDate(Date startDate){
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(startDate);
@@ -19,6 +20,7 @@ public class DateConverterUtil {
         return calendar.getTime();
     }
 
+    @Override
     public Date calculateStartDate(Date today){
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(today);

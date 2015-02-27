@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.util.Date;
 
 @Component
-public class BeanCreatorUtil {
+public class BeanCreatorUtilImpl implements BeanCreatorUtil{
 
     @Autowired
     private GridFsTemplate gridFsTemplate;
@@ -28,11 +28,13 @@ public class BeanCreatorUtil {
     @Autowired
     private ProductService productService;
 
+    @Override
     public Consumption createConsumption(ConsumptionDto consumptionDto){
         Date today = new Date();
         return new Consumption(consumptionDto.getProductName(),today);
     }
 
+    @Override
     public Product createProduct(ProductDto productDto){
         Product product = new Product(productDto.getName());
         for(NutrientDto nutrientDto : productDto.getNutrientDtos()){
@@ -44,7 +46,7 @@ public class BeanCreatorUtil {
 
     private void saveProductPic(ProductDto productDto){
         try {
-            if(productDto.getProdImg().getBytes().length>0){
+            if(null != productDto.getProdImg() && productDto.getProdImg().getBytes().length>0){
                 GridFSDBFile gridFSDBFile = productService.fetchProductPic(productDto.getName());
                 if(null != gridFSDBFile){
                     gridFsTemplate.delete(Query.query(GridFsCriteria.whereFilename().is(productDto.getName())));
@@ -56,6 +58,7 @@ public class BeanCreatorUtil {
         }
     }
 
+    @Override
     public Nutrient createNutrient(NutrientDto nutrientDto){
         return new Nutrient(nutrientDto.getName(),createUnit(nutrientDto.getUnitDto()));
     }

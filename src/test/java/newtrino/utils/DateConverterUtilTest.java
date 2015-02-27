@@ -14,7 +14,7 @@ public class DateConverterUtilTest {
 
     @Before
     public void setUp() throws Exception {
-        dateConverterUtil = new DateConverterUtil();
+        dateConverterUtil = new DateConverterUtilImpl();
     }
 
     @Test

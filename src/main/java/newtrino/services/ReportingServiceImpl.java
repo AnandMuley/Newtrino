@@ -27,7 +27,7 @@ public class ReportingServiceImpl implements ReportingService{
     private DtoCreatorUtil dtoCreatorUtil;
 
     @Override
-    public List<ConsumptionJsonDto> fetchConsumptionData() throws JSONException {
+    public List<ConsumptionJsonDto> fetchConsumptionData() {
         Date today = new Date();
         Set<ConsumptionDto> consumptionDtos = consumptionService.productsConsumedOn(today);
         Set<String> productNames = extractProductNames(consumptionDtos);

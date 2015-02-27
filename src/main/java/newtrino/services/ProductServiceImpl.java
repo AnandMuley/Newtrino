@@ -10,6 +10,7 @@ import newtrino.utils.DtoCreatorUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.gridfs.GridFsCriteria;
+import org.springframework.data.mongodb.gridfs.GridFsOperations;
 import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -21,16 +22,16 @@ import java.util.Set;
 public class ProductServiceImpl implements ProductService{
 
     @Autowired
-    private BeanCreatorUtil beanCreatorUtil;
+    protected BeanCreatorUtil beanCreatorUtil;
 
     @Autowired
-    private DtoCreatorUtil dtoCreatorUtil;
+    protected DtoCreatorUtil dtoCreatorUtil;
 
     @Autowired
-    private ProductDao productDao;
+    protected ProductDao productDao;
 
     @Autowired
-    private GridFsTemplate gridFsTemplate;
+    protected GridFsOperations gridFsTemplate;
 
     @Override
     public void add(ProductDto productDto) {

@@ -44,17 +44,18 @@ public class ConsumptionServiceImpl implements ConsumptionService{
 
     @Override
     public ConsumptionDto changeConsumptionQuantity(String productName,Integer opr) {
-        Consumption consumption = null;
+        ConsumptionDto consumptionDto = null;
 
         switch (opr){
             case 1 :
-                 consumption = consumptionDao.changeConsumptionQuantity(productName, 1);
+                 Consumption consumption = consumptionDao.changeConsumptionQuantity(productName, 1);
+                 consumptionDto = dtoCreatorUtil.createConsumptionDto(consumption);
                 break;
             case -1 :
-                consumption = consumptionDao.changeConsumptionQuantity(productName,-1);
+                Consumption consump = consumptionDao.changeConsumptionQuantity(productName,-1);
+                consumptionDto = dtoCreatorUtil.createConsumptionDto(consump);
                 break;
         }
-
-        return dtoCreatorUtil.createConsumptionDto(consumption);
+        return consumptionDto;
     }
 }

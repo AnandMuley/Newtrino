@@ -9,10 +9,18 @@ public class ProductDto extends SearchDto implements Comparable {
     private String id;
     private String name;
     private MultipartFile prodImg;
+    // Please change the quantity to double
     private String quantity;
     private List<NutrientDto> nutrientDtos;
 
     public ProductDto() {
+    }
+
+    public ProductDto(String name, MultipartFile prodImg, String quantity, List<NutrientDto> nutrientDtos) {
+        this.name = name;
+        this.prodImg = prodImg;
+        this.quantity = quantity;
+        this.nutrientDtos = nutrientDtos;
     }
 
     public ProductDto(String id, String name) {

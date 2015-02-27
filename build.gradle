@@ -2,8 +2,11 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'war'
 apply plugin: 'jetty'
+apply plugin: 'jacoco'
+
 
 sourceCompatibility = 1.7
+
 version = '1.0'
 def SpringVersion = '4.0.0.RELEASE'
 def JUnitVersion = '4.11'
@@ -55,6 +58,30 @@ ext{
     servlet = [
             api : 'javax.servlet:servlet-api:2.5'
     ]
+}
+
+jacoco{
+    toolVersion = "0.7.1.201405082137"
+}
+
+test{
+    jacoco {
+        append = false
+//        destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+//        classDumpFile = file("$buildDir/jacoco/classpathdumps")
+    }
+}
+
+jacocoTestReport{
+    dependsOn test
+    group = "Nutrino"
+    description = "Generate a coverage report for Nutrino"
+    additionalSourceDirs = files(sourceSets.main.allJava.srcDirs)
+    reports{
+        xml.enabled false
+        csv.enabled false
+        html.destination "$buildDir/jacocoHtml"
+    }
 }
 
 repositories {
