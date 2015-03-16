@@ -1,14 +1,8 @@
 package newtrino.utils;
 
 import com.mongodb.gridfs.GridFSDBFile;
-import newtrino.beans.Consumption;
-import newtrino.beans.Nutrient;
-import newtrino.beans.Product;
-import newtrino.beans.Unit;
-import newtrino.dtos.ConsumptionDto;
-import newtrino.dtos.NutrientDto;
-import newtrino.dtos.ProductDto;
-import newtrino.dtos.UnitDto;
+import newtrino.beans.*;
+import newtrino.dtos.*;
 import newtrino.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.query.Query;
@@ -27,6 +21,9 @@ public class BeanCreatorUtilImpl implements BeanCreatorUtil{
 
     @Autowired
     private ProductService productService;
+
+    @Autowired
+    private DateConverterUtil dateConverterUtil;
 
     @Override
     public Consumption createConsumption(ConsumptionDto consumptionDto){
@@ -61,6 +58,27 @@ public class BeanCreatorUtilImpl implements BeanCreatorUtil{
     @Override
     public Nutrient createNutrient(NutrientDto nutrientDto){
         return new Nutrient(nutrientDto.getName(),createUnit(nutrientDto.getUnitDto()));
+    }
+
+    private Name createNameBean(NameDto nameDto){
+       Name name = null;
+       if(null != nameDto) {
+           name = new Name(nameDto.getFirst(), nameDto.getMiddle(), nameDto.getLast());
+       }
+       return name;
+    }
+
+    private Contact createContactBean(ContactDto contactDto){
+        Contact contact = null;
+        if(contactDto != null){
+            contact = new Contact(contactDto.getEmailId(),contactDto.getMobileNo());
+        }
+        return contact;
+    }
+
+    @Override
+    public User createUserBean(UserDto userDto) {
+        return new User(createNameBean(userDto.getNameDto()),userDto.getUsername(),userDto.getPassword(),createContactBean(userDto.getContactDto()),dateConverterUtil.toDate(userDto.getBirthDate(),DateConverterUtil.PATTERN_DDMMYYYY));
     }
 
     private Unit createUnit(UnitDto unitDto) {

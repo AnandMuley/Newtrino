@@ -11,4 +11,8 @@ public interface ViewNames {
 
     String FOLDER_REPORTS = "report/";
     String REPORT_HOME = FOLDER_REPORTS+"ReportsHome";
+
+    String REGISTRATION = "Registration";
+    String LOGIN = "Login";
+    String HOME = "Home";
 }

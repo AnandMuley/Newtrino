@@ -1,14 +1,12 @@
 package newtrino.utils;
 
-import newtrino.beans.Consumption;
-import newtrino.beans.Nutrient;
-import newtrino.beans.Product;
-import newtrino.beans.Unit;
+import newtrino.beans.*;
 import newtrino.dtos.*;
 import newtrino.dtos.chart.ConsumptionJsonDto;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -17,6 +15,9 @@ import java.util.*;
 
 @Service
 public class DtoCreatorUtilImpl implements DtoCreatorUtil{
+
+    @Autowired
+    private DateConverterUtil dateConverterUtil;
 
     @Override
     public Set<ConsumptionDto> createConsumptions(List<Consumption> consumptions){
@@ -58,6 +59,23 @@ public class DtoCreatorUtilImpl implements DtoCreatorUtil{
         nutrientDto.setName(nutrient.getName());
         nutrientDto.setUnitDto(createUnitDto(nutrient.getUnit()));
         return nutrientDto;
+    }
+
+    @Override
+    public UserDto createUserDto(User user) {
+        return new UserDto(user.getId(),createNameDto(user.getName()),user.getUsername(),user.getPassword(),createContactDto(user.getContact()),dateConverterUtil.toString(user.getBirthDate(),DateConverterUtil.PATTERN_DDMMYYYY));
+    }
+
+    private ContactDto createContactDto(Contact contact) {
+        return new ContactDto(contact.getEmailId(),contact.getMobileNo());
+    }
+
+    private NameDto createNameDto(Name name) {
+        NameDto nameDto = null;
+        if(null != name) {
+           nameDto = new NameDto(name.getFirst(), name.getMiddle(), name.getLast());
+        }
+        return nameDto;
     }
 
     private UnitDto createUnitDto(Unit unit) {

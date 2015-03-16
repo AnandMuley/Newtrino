@@ -2,6 +2,8 @@ package newtrino.utils;
 
 import org.springframework.stereotype.Component;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -29,6 +31,24 @@ public class DateConverterUtilImpl implements DateConverterUtil{
         calendar.set(Calendar.SECOND,0);
         calendar.set(Calendar.MILLISECOND,0);
         return calendar.getTime();
+    }
+
+    @Override
+    public Date toDate(String date, String pattern) {
+        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+        Date dateObj = null;
+        try {
+            dateObj = sdf.parse(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return dateObj;
+    }
+
+    @Override
+    public String toString(Date source, String pattern) {
+        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+        return sdf.format(source);
     }
 
 }

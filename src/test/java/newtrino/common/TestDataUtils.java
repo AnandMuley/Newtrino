@@ -1,13 +1,7 @@
 package newtrino.common;
 
-import newtrino.beans.Consumption;
-import newtrino.beans.Nutrient;
-import newtrino.beans.Product;
-import newtrino.beans.Unit;
-import newtrino.dtos.ConsumptionDto;
-import newtrino.dtos.NutrientDto;
-import newtrino.dtos.ProductDto;
-import newtrino.dtos.UnitDto;
+import newtrino.beans.*;
+import newtrino.dtos.*;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -15,6 +9,18 @@ import java.util.*;
 
 @Component
 public class TestDataUtils {
+
+    public UserDto createUserDto(String birthDate){
+        return new UserDto("UID101",createNameDto("First","Middle","Last"),"Username","Password",createContactDto("user@gmail.com","07898967878"),birthDate);
+    }
+
+    private ContactDto createContactDto(String emailId,String mobileNo) {
+        return new ContactDto(emailId,mobileNo);
+    }
+
+    private NameDto createNameDto(String first,String middle,String last) {
+        return new NameDto(first,middle,last);
+    }
 
     public ProductDto createProductDto(int nutrients){
         MultipartFile prodImg = null;
@@ -50,6 +56,25 @@ public class TestDataUtils {
         Nutrient protein = new Nutrient("Protein",unit);
         product.getNutrients().add(protein);
         return product;
+    }
+
+    public User createUser(){
+        User user = new User(createName("Aron","Johnson"),"AronJo","Arjo@123",createContact("aron@gmail.com"),createBirthDate(20));
+        return user;
+    }
+
+    private Date createBirthDate(int age) {
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.YEAR,age);
+        return cal.getTime();
+    }
+
+    private Contact createContact(String emailID) {
+        return new Contact(emailID);
+    }
+
+    private Name createName(String first, String last) {
+        return new Name(first,last);
     }
 
 
