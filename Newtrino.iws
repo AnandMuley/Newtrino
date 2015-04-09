@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7151026d-7bd5-435c-88ff-80b777f89a3c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/utils/BeanCreatorUtil.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/utils/BeanCreatorUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/utils/BeanCreatorUtilImpl.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/utils/BeanCreatorUtilImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/utils/DBCollections.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/utils/DBCollections.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/utils/DateConverterUtil.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/utils/DateConverterUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/utils/DateConverterUtilImpl.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/utils/DateConverterUtilImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/utils/DtoCreatorUtil.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/utils/DtoCreatorUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/utils/DtoCreatorUtilImpl.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/utils/DtoCreatorUtilImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/controllers/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/controllers/IndexController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/utils/Messages.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/utils/Messages.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Navigation.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Navigation.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Newtrino.ipr" afterPath="$PROJECT_DIR$/Newtrino.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Newtrino.iws" afterPath="$PROJECT_DIR$/Newtrino.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/newtrino/common/TestDataUtils.java" afterPath="$PROJECT_DIR$/src/test/java/newtrino/common/TestDataUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/newtrino/utils/ViewNames.java" afterPath="$PROJECT_DIR$/src/main/java/newtrino/utils/ViewNames.java" />
-    </list>
+    <list default="true" id="7151026d-7bd5-435c-88ff-80b777f89a3c" name="Default" comment="" />
     <ignored path="Newtrino.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -97,9 +82,10 @@
       <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/newtrino/services/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1062">
+            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="918">
               <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="e#1188#1189#0" expanded="false" />
                 <element signature="e#1233#1234#0" expanded="false" />
                 <element signature="e#1452#1453#0" expanded="false" />
@@ -122,9 +108,11 @@
       <file leaf-file-name="UserServiceTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/newtrino/services/UserServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="2232">
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1998">
               <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1702,11 +1690,12 @@
       <workItem from="1426444094116" duration="2561000" />
       <workItem from="1426495189535" duration="1941000" />
       <workItem from="1426507190848" duration="847000" />
+      <workItem from="1426584586135" duration="1199000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214961000" />
+    <option name="totallyTimeSpent" value="216160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="24" width="1311" height="744" extended-state="6" />
@@ -2172,7 +2161,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2232">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2181,6 +2172,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1062">
           <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#1188#1189#0" expanded="false" />
             <element signature="e#1233#1234#0" expanded="false" />
             <element signature="e#1452#1453#0" expanded="false" />
