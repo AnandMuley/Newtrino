@@ -1,21 +1,12 @@
 package newtrino.services;
 
-import com.mongodb.gridfs.GridFSDBFile;
 import newtrino.dtos.ProductDto;
-import newtrino.dtos.SearchResponseJsonDto;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Set;
+@Service
+public class ProductService {
 
-public interface ProductService {
+    public void add(ProductDto productDto) {
 
-    void add(ProductDto productDto);
-
-    Set<ProductDto> fetchAll();
-
-    List<SearchResponseJsonDto> search(ProductDto productDto);
-
-    GridFSDBFile fetchProductPic(String id);
-
-    void deleteProduct(String productName);
+    }
 }
