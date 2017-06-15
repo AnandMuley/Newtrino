@@ -4,7 +4,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
-public class ProductDto extends SearchDto implements Comparable {
+public class ProductDto implements Comparable {
 
     private String id;
     private String name;

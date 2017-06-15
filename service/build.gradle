@@ -1,0 +1,42 @@
+group 'service'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'idea'
+apply plugin: 'groovy'
+apply plugin: 'jetty'
+apply plugin: 'jacoco'
+
+sourceCompatibility = 1.8
+httpPort = 8093
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Newtrino'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+jacoco {
+    toolVersion = "0.7.6.201602180812"
+    reportsDir = file("$buildDir/coverageReport")
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination "${buildDir}/jacocoHtml"
+    }
+}
+
+dependencies {
+    compile json
+    compile spring.web, spring.core, spring.test, jersey.server, jackson, jersey.inmemorytest
+    compile jersey.spring, spring.mongo, spring.webmvc, hamcrest.core, hamcrest.library, jmock.core,jmock.legacy
+    testCompile testng, jmock.core,jmock.legacy, hamcrest.core, hamcrest.library,groovy
+    testCompile spock.core,spock.cglib,spock.objenesis
+}
