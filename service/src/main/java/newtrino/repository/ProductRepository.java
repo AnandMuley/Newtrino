@@ -1,6 +1,6 @@
 package newtrino.repository;
 
-import newtrino.beans.Product;
+import newtrino.model.Product;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

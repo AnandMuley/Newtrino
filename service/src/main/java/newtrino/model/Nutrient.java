@@ -1,4 +1,4 @@
-package newtrino.beans;
+package newtrino.model;
 
 public class Nutrient {
 

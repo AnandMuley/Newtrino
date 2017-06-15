@@ -1,13 +1,12 @@
-package newtrino.beans;
+package newtrino.model;
 
 
-import newtrino.utils.DBCollections;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 
-@Document(collection = DBCollections.CONSUMPTIONS)
+@Document
 public class Consumption {
 
     @Id
